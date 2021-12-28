@@ -7,16 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
 
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-	
+
+
+
 	<!-- css files -->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
     <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
@@ -28,6 +22,24 @@
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<!-- //google fonts -->
 	
+	<!-- script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script> -->
+
+	<script>
+		$(document).click(function() {
+		$("#todelete").remove();
+		});
+	</script>
+
 </head>
 <body>
 
@@ -37,32 +49,13 @@
 		<div class="ml-auto text-right right-p">
 			<ul>
 				<li class="mr-3">
-					<span class="fa fa-clock-o"></span>Designed By Hackveda</li>
+					<span class="fa fa-clock-o"></span>Designed By Shubham</li>
 				<li>
-					<span class="fa fa-envelope-open"></span> <a href="mailto:yash_sharma@hackveda.in">yash_sharma@hackveda.in</a> </li>
+					<span class="fa fa-envelope-open"></span> <a href="mailto:www.samk8800@gmail.com">Mail any query to Shubham</a> </li>
 			</ul>
 		</div>
 	</div>
-	<div class="container">
-		<!-- nav
-		<nav class="py-3 d-lg-flex">
-			<div id="logo">
-				<h1> <a href="index.html"><img src="images/s2.png" alt=""> Child Learn </a></h1>
-			</div>
-			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
-			<input type="checkbox" id="drop" />
-			<ul class="menu ml-auto mt-1">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li class=""><a href="#about">About</a></li>
-				<li class=""><a href="#services">Services</a></li>
-				<li class=""><a href="#stats">Stats</a></li>
-				<li class=""><a href="#testi">Testimonials</a></li>
-				<li class=""><a href="#team">Teachers</a></li>
-				<li class=""><a href="#subscribe">Subscribe</a></li>
-			</ul>
-		</nav>
-		<!-- //nav -->  -->
-	</div>
+
 </header>
 <!-- //header -->
 
@@ -116,19 +109,29 @@
 									<!--<input placeholder="Password" name="password" type="password" required=""> -->
 									<button Class="btn" name="submit"> Click To Predict</button>
 									<span>By registering, you agree to our <a href="#">Terms & Conditions.</a></span>
-								</div>
 								
+							
+								
+								<div id="">
 								<?php
 
-								if(isset($_POST["submit"]))
-								{
-								$hours = $_POST["hours"];
-								echo "<br><br>";
-								system("C:\\Users\\YASH\\AppData\\Local\\Programs\\Python\\Python37-32\\python student_model.py ".$hours." 2>&1 -W ignore::DeprecationWarning");
 								
-								}
+
+									if(isset($_POST["submit"]))
+									{
+									$hours = $_POST["hours"];
+									echo "<br><br>";
+									system("C:\\Users\\SHUBHAM\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe student_model.py ".$hours." 2>&1 -W ignore::DeprecationWarning");
+									
+									}
+
+									?>
+								</div>	
+						
+
 								
-								?>
+							
+								
 		
 							</form>
 							<!-- //banner form -->
@@ -139,6 +142,9 @@
 		</div>
 	</div>
 </div>
+
+
+
 <!-- //banner -->
 </body>
 </html>
